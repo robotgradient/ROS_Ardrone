@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+
+ 
+  <node ns="camera" pkg="image_proc" type="image_proc" name="image_proc"/>
+  <node name="ar_pose_bottom" pkg="ar_pose" type="ar_single" respawn="false"
+    output="screen">
+   <param name="marker_frame" type="string" value="marker_1"/>
+    <param name="marker_pattern" type="string" value="data/4x4/4x4_8.patt"/>
+    <param name="marker_width" type="double" value="152.4"/>
+    <param name="marker_center_x" type="double" value="0.0"/>
+    <param name="marker_center_y" type="double" value="0.0"/>
+    <param name="threshold" type="int" value="100"/>
+    <param name="use_history" type="bool" value="true"/>
+   <param name="reverse_transform" type="bool" value="false"/>
+   <remap from="/camera/camera_info" to="/ardrone/bottom/camera_info"/>
+   <remap from="/camera/image_raw" to="/ardrone/bottom/image_raw"/>
+  <remap from="/ar_pose_marker" to="/ar_pose_marker_bottom"/>
+  </node>
+
+</launch>

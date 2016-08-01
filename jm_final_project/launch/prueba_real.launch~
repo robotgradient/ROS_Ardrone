@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<launch>
+
+
+  
+<!--<include file="$(find jm_final_project)/launch/ar_pose_bottom.launch"/>-->
+<!--	<include file="$(find jm_final_project)/launch/ar_pose_global.launch"/>-->
+
+
+<!--ar_pose-->
+	<include file="$(find jm_final_project)/launch/ar_pose_bottom.launch"/>
+
+	<node pkg="jm_final_project" type="take_land_node" name="take_land_node" output="screen"/>
+
+<!--Rosrun rviz -->
+ <!-- <node pkg="rviz" type="rviz" name="rviz" output="screen"/>-->
+
+	<node pkg="rqt_reconfigure" type="rqt_reconfigure" name="rqt_reconfigure" 		output="screen"/>
+
+
+
+	 <node pkg="jm_final_project" type="arsuscriber_marker1" name="arsuscriber_marker1" 		output="screen"/>  
+         <!--<node pkg="jm_final_project" type="keyboardControl" name="keyboardControl" 		output="screen"/>  -->
+
+	<!--<node pkg="jm_final_project" type="main" name="main" output="screen"/>-->
+
+	
+	<!--<node pkg="rqt_image_view" type="rqt_image_view" name="rqt_image_view" />-->
+
+
+</launch>

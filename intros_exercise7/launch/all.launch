@@ -1,0 +1,15 @@
+<launch>
+
+    <!-- Launch empty world -->
+    <include file="$(find intros_exercise7)/launch/w1.launch"/>
+
+    <!-- Spawn the simple arm model -->
+    <include file="$(find intros_exercise7)/launch/robot_7.launch"/>
+
+    <!-- Load simple arm controllers -->
+    <include file="$(find intros_exercise7)/launch/load_controller.launch"/>
+
+<node pkg="intros_exercise7" type="anglepublisher" name="anglepublisher" output="screen"/>
+	<node pkg="rqt_reconfigure" type="rqt_reconfigure" name="rqt_reconfigure" output="screen"/>
+
+</launch>

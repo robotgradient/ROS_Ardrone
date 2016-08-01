@@ -1,0 +1,13 @@
+<launch>
+
+
+<node name="action_server" pkg="intros_action_example" type="action_server" />
+
+
+<node name="action_client" pkg="intros_action_example" type="action client" />
+
+
+
+
+
+</launch>

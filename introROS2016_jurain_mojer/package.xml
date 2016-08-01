@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <name>introROS2016_jurain_mojer</name>
+  <version>0.0.0</version>
+  <description>The introROS2016_jurain_mojer package</description>
+  <maintainer email="marcoojer@todo.todo">username</maintainer>
+  <license>TODO</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <!-- <run_depend>nombre_package</run_depend> -->
+
+ 
+
+ <export>
+   <metapackage />
+ </export>
+</package>

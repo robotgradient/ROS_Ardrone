@@ -1,0 +1,9 @@
+<launch>
+
+	<include file="$(find intros_usb_cam)/launch/usb_cam.launch"/>
+	<include file="$(find intros_usb_cam)/launch/ar_pose.launch"/>
+
+	<node pkg="yours" type="arsuscriber" name="arsuscriber" output="screen"/>
+	<node pkg="rqt_reconfigure" type="rqt_reconfigure" name="rqt_reconfigure" output="screen"/>
+	<node pkg="rviz" type="rviz" name="rviz" output="screen"/>
+</launch>

@@ -1,6 +1,3 @@
-GO TO jm_final_project
-
-
 //FINAL IN GAZEBO
 Run the Final_sim. launch to see our final structure in Gazebo.
 You should open in other terminal keyboardControl in order to have manual control.

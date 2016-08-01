@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Launch World -->
+  <include file="$(find ardrone_sim)/launch/world.launch"/>
+
+  <!-- Spawn simulated quadrotor uav -->
+  <include file="$(find ardrone_sim)/launch/spawn_ardrone.launch"/>
+
+
+<!--<include file="$(find jm_final_project)/launch/ar_pose_bottom.launch"/>-->
+<!--	<include file="$(find jm_final_project)/launch/ar_pose_global.launch"/>-->
+
+
+<!--ar_pose-->
+	<include file="$(find jm_final_project)/launch/ar_pose_bottom.launch"/>
+
+
+<!--Rosrun rviz -->
+ <!-- <node pkg="rviz" type="rviz" name="rviz" output="screen"/>-->
+
+	<node pkg="rqt_reconfigure" type="rqt_reconfigure" name="rqt_reconfigure" output="screen"/>
+
+	<node pkg="jm_final_project" type="rqt_commander" name="rqt_commander" output="screen"/>
+
+
+
+	 <node pkg="jm_final_project" type="controller_final" name="controller_final" output="screen"/>
+
+	<node pkg="jm_final_project" type="Brain" name="Brain" output="screen"/>
+
+  	<node pkg="jm_final_project" type="z_server" name="z_server" output="screen"/>
+
+   	<node pkg="jm_final_project" type="yaw_server" name="yaw_server" output="screen"/>
+
+  	<node pkg="jm_final_project" type="watchmarker_server" name="watchmarker_server" output="screen"/>
+
+  
+
+</launch>

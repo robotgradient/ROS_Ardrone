@@ -1,0 +1,28 @@
+#include "ros/ros.h"
+#include “name_package/AddTwoInts.h”
+
+
+
+ros::init(argc, argv, "service_server");
+ros::NodeHandle nh;
+ros::Rate loop_rate(10);
+
+ ros::ServiceServer service = nh.advertiseService("add_two_ints", add);
+ ROS_INFO("Ready to add two ints.");
+
+while (ros::ok())
+
+
+bool add(name_package::AddTwoInts::Request  &req, name_package::AddTwoInts::Response &res)
+{
+  res.sum = req.a + req.b;
+  ROS_INFO("request: x=%ld, y=%ld", (long int)req.a, (long int)req.b);
+  ROS_INFO("sending back response: [%ld]", (long int)res.sum);
+  return true;
+}
+
+int main(int argc, char **argv)
+{
+
+
+
